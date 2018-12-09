@@ -51,7 +51,7 @@ def sendCommand(szOutFinal, mydevice):
     #buffer = StringIO()
     buffer = BytesIO()
     url = str("http://{}/ax?c2=191&c1=RfRaw%20".format(mydevice))
-    url += szOutFinal
+    url += szOutFinal.replace(" ","%20")
     print(url)
     print("Sending command to bridge")
     c = pycurl.Curl()
