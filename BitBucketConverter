@@ -172,7 +172,9 @@ def findSyncPattern(szData):
             print("Second sync bucket is in front")
             print("Sync buckets: " + szData[-1:] + szData[0:1])        
             print("New data: " + syncData)        
-
+    if (options.nomove):
+        syncData = szData
+        print("Option NoMove is set. Not moving the Sync Bucket")
     return syncData
 
 def decodeBuckets(buckets, data):
@@ -260,7 +262,9 @@ parser = OptionParser(usage=usage, version="%prog 0.3")
 parser.add_option("-e", "--dev", action="store", type="string",
                   dest="device", help="device to send RfRaw B0 command")
 parser.add_option("-r", "--repeat", action="store",
-                  dest="repeat", default=20, help="number of times to repeat")
+                  dest="repeat", default=4, help="number of times to repeat")
+parser.add_option("-m", "--no-move", action="store_true",
+                  dest="nomove", default=False, help="Do not move sync bucked")
 parser.add_option("-d", "--debug", action="store_true",
                   dest="debug", default=False, help="show debug info")
 parser.add_option("-v", "--verbose", action="store_true",
