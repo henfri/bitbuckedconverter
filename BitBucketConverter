@@ -48,6 +48,7 @@ def getInputStr():
     return auxStr
 
 def sendCommand(szOutFinal, mydevice):
+    mydevice.replace("http://","").replace("/","")
     #buffer = StringIO()
     buffer = BytesIO()
     url = str("http://{}/ax?c2=191&c1=RfRaw%20".format(mydevice))
