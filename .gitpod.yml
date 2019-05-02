@@ -1,0 +1,3 @@
+tasks:
+- before: pip install pycurl image
+  command: python BitBucketConverter -f console.txt
