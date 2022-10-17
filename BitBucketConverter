@@ -58,7 +58,7 @@ def sendCommand(szOutFinal, mydevice):
     #buffer = StringIO()
     mydevice.replace("http://","").replace("/","")
     buffer = BytesIO()
-    url = str("http://{}/ax?c2=191&c1=RfRaw%20".format(mydevice))
+    url = str("http://{}/cs?c2=191&c1=RfRaw%20".format(mydevice))
     url += szOutFinal.replace(" ","%20")
     print(url)
     print("Sending command to bridge")
