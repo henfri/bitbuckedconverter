@@ -5,9 +5,10 @@ Prepare your **SonOff RF Bridge** https://tasmota.github.io/docs/devices/Sonoff-
 sudo apt update
 sudo apt install python3-pip libcurl4-openssl-dev libssl-dev
 pip install pycurl image
-curl https://raw.githubusercontent.com/s0mm3rb/bitbuckedconverter/master/BitBucketConverter -o bitbucketconverter.py
-chmod +x bitbucketconverter.py
 ```
+save the converter script to `bitbucketconverter.py`  
+and make it executable `chmod +x bitbucketconverter.py`
+
 ## Prepare
 1. Run `RfRaw 177` in your **SonOff RF Bridge** console
 2. Push all your buttons on the remote (each Button 2-3 times)
